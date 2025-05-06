@@ -19,7 +19,7 @@ pipeline {
         stage('Trigger Render Deployment') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'RenderDeployKey', variable: 'KEY')]) {
+                    withCredentials([string(credentialsId: 'SecretText', variable: 'KEY')]) {
                         sh "curl https://api.render.com/deploy/$KEY"
                     }
                 }
