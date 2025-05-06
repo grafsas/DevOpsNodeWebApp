@@ -5,7 +5,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'DockerHub-grafsas-DevOps', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    withCredentials([usernamePassword(credentialsId: 'DockerHub-saschamarc', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                         sh '''
                             export DOCKER_HOST=tcp://172.17.0.2:2375
                             docker login -u $USERNAME -p $PASSWORD
