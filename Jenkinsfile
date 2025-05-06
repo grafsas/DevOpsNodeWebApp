@@ -9,7 +9,7 @@ pipeline {
                         sh '''
                             export DOCKER_HOST=tcp://172.17.0.2:2375
                             docker login -u $USERNAME -p $PASSWORD
-                            docker push saschamarc/node-web-app
+                            docker push grafsas/node-web-app
                         '''
                     }
                 }
